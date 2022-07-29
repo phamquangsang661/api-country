@@ -1,11 +1,11 @@
 const lib = require('country-state-city')
 let state = require('country-state-city').State;
-
+var cors = require('cors')
 
 const express = require('express')
 const app = express()
 const port = 3000
-
+app.use(cors())
 
 
 app.get('/country/cities', (req, res) => {
