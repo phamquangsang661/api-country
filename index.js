@@ -2,9 +2,6 @@ const lib = require('country-state-city')
 let Country = require('country-state-city').Country;
 
 
-Country.getAllCountries()
-console.log(lib.City.getCitiesOfCountry('VN'))
-
 const express = require('express')
 const app = express()
 const port = 3000
