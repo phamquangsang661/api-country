@@ -1,5 +1,5 @@
 const lib = require('country-state-city')
-let Country = require('country-state-city').Country;
+let state = require('country-state-city').State;
 
 
 const express = require('express')
@@ -11,6 +11,11 @@ const port = 3000
 app.get('/country/cities', (req, res) => {
     const { country_code } = req.query
     return res.json(lib.City.getCitiesOfCountry(country_code))
+})
+
+app.get('/country/state', (req, res) => {
+    const { country_code } = req.query
+    return res.json(state.getStatesOfCountry(country_code))
 })
 
 app.listen(port, () => {
